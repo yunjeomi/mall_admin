@@ -1,0 +1,88 @@
+완료 css/script 경로설정 완료
+완료 a태그 컬러 진한-옅은 회색으로 변경 or 중회색? -> 검색시 font-weight:600;
+완료 h2 header랑 밑에 간격 너무 넓은듯? 변경완료
+ordersEbookOne :  a태그 컬러변경 확인. 전체페이지의 표 넓이가 넘 큼..
+noticeList : 
+noticeOne : 양쪽 간격 너무 넓어보여. 수정 삭제 버튼 테이블이랑 조금 더 붙도록
+managerList : 테이블 가운데정렬. select칸 설정
+clientList : 검색에서 메일-검색창-검색버튼 일자로 오도록
+updateClient : 폭 조정
+ebookList : date 가운데정렬
+categoryList 삭제칸 폭 줄이기
+comment-notice 칸 조정
+adminIndex 배경화면 바꾸기
+
+정규표현식 사용하기.
+
+
+자세한 문법은 다음을 참고 
+
+https://namu.wiki/w/정규%20표현식?from=정규표현식
+
+메타문자(키워드)
+^x : x로 시작하는
+x$ : x로 끝나는
+x+ : x가 1번이상 반복
+x{1, 10} : x가 1번에서 10번사이
+약식키워드
+\w : [a-zA-Z0-9] 의 약식표현
+\d : [0-9]의 약식표현
+
+<input type="text" name="managerId" required pattern="^[a-z0-9]{4,15}$">
+
+<input type="password" name="managerPw" required pattern="^[a-zA-Z0-9\W]{4,15}$">
+
+<input type="text" name="ebookISBN"  required pattern="^\d{9}-\d{1}$">
+
+<input type="text" name="ebookAuthor" required pattern="^[a-zA-Z가-힣\s]+$">
+
+<input type="text" name="ebookPageCount" required pattern="^[0-9]+$">
+
+<input type="text" name="ebookPrice" required pattern="^[0-9]+$">
+
+<input type="text" name="managerId" required pattern="^[a-z0-9]{4,15}$">
+
+<input type="password" name="managerPw" required pattern="^[a-zA-Z0-9\W]{4,15}$">
+
+<input type="text" name="managerName" required pattern="^[a-zA-Z가-힣]{2,20}$">
+
+<input type="text" name="managerName" required pattern="^[a-zA-Z가-힣0-9]{1,100}$">
+
+<input type="text" name="managerName" required pattern="^[a-zA-Z가-힣0-9~!@#$%^&*(){}-=+/]{1,20}$">
+
+
+
+adminIndex 
+o	로그인 : 로그인 폼
+	
+category 한글만
+o	name : 2-20자. 한글+대소문자
+	
+client
+o 	mail : email형식 - 수정 불가능
+o	pw : 4-11자. 알파벳대소문자+숫자
+	
+ebook
+o	isbn : nnnnnnnnn-n or nnnnnnnnn-X (n:숫자)
+o	title : 1-100자. 한영구분없음+숫자
+o	author : 1-50자. 한영구분없음+숫자
+o	company : 1-50자. 한영구분없음+숫자
+o	pagecount : 100-1000. 숫자만
+o	price : 1000-30000. 숫자만
+textarea는 없나봄..	summary : 0-300자. 한영구분없음+숫자
+	
+manager
+o	id : 5-15자. 소문자+숫자만
+o	pw : 5-15자. 대소문자+숫자
+o	name : 2-20자. 한글+대소문자
+	
+notice
+o	title : 1-20자. 한영구분없음+숫자+특수문자
+textarea	content : 1-300자. 한영구분없음+숫자+특수문자
+	
+comment(notice)
+textarea	content - 입력 제한 100자. 한영구분없음+숫자+특수문자
+	
+orders
+	없음	
+	

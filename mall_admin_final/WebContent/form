@@ -1,0 +1,98 @@
+버튼 하얀색바탕 class="button alt"
+버튼 검정바탕 class="button"
+버튼 하얀색바탕 class="button alt small"
+버튼 검정바탕 class="button small" 폰트사이즈 0.8em
+버튼 오른쪽 정렬 style="float: right"
+오른쪽 정렬 클래스 class="align-right"
+가운데 정렬 클래스 class="align-center"
+style="text-align:center; vertical-align:center;"
+
+#f6f6f6
+
+
+		height: 3.15em;
+		line-height: 3.25em;
+		padding: 0 2.2em;
+		text-align: center;
+		font-size: 0.8em;
+
+
+<!--css링크수정 -->
+<link rel="stylesheet" href="<%=request.getContextPath() %>/assets/css/main.css" />
+
+<!-- Header -->
+	<!-- 관리자메뉴 -->
+		<header id="header">
+			<h1><strong><a href="<%=request.getContextPath() %>/adminIndex.jsp">EbookMall</a></strong> for admin</h1>
+			<nav id="nav">
+				<ul>
+					<jsp:include page="/inc/adminMenu.jsp"></jsp:include>
+				</ul>
+			</nav>
+		</header>
+	
+		<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+	<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="container">
+
+				<header class="major special">
+					<h2>Generic</h2>
+					<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+				</header>
+				
+				<p>test</p>
+				<div class="table-wrapper">
+					<table class="alt">
+				
+			</div>
+		</section>
+
+	<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="#" class="icon fa-facebook"></a></li>
+					<li><a href="#" class="icon fa-twitter"></a></li>
+					<li><a href="#" class="icon fa-instagram"></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; yunjeong</li>
+					<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+					<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+				</ul>
+			</div>
+		</footer>
+		
+		
+		
+<ul class="actions small">
+	<li><a href="#" class="button special small">Small</a></li>
+	<li><a href="#" class="button small">Small</a></li>
+	<li><a href="#" class="button alt small">Small</a></li>
+</ul>
+
+font-size: 0.8em;
+
+<div class="table-wrapper">
+	<table class="alt">
+		
+	</table>
+</div>
+
+<div class="table-wrapper">
+	<table>
+					
+	.align-left {
+		text-align: left;
+	}
+
+	.align-center {
+		text-align: center;
+	}
+
+	.align-right {
+		text-align: right;
+	}			
+					
