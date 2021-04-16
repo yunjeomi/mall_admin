@@ -31,15 +31,15 @@
 	
 	//인코딩&수집 - ebookNo
 	request.setCharacterEncoding("UTF-8");
-	String ebookISBN = request.getParameter("ebookISBN");
-	System.out.println("선택한 ebookISBN-> "+ebookISBN);
+	int ebookNo = Integer.parseInt(request.getParameter("ebookNo"));
+	System.out.println("선택한 ebookNo-> "+ebookNo);
 
 	Ebook ebook = new Ebook();
-	ebook.setEbookISBN(ebookISBN);
+	ebook.setEbookNo(ebookNo);
 	
 	//선택한 ebookList출력
 	//EbookDao에 no만 알면 리스트 출력해주는 메소드가 있음.
-	Ebook ebookOne = EbookDao.selectEbookOne(ebook);
+	Ebook ebookOne = OrdersDao.ebookOne(ebook);
 %>
 
 	<!-- Header -->
@@ -87,11 +87,11 @@
 						</tr>
 						<tr>
 							<td>ebookSummary</td>
-							<td><%=ebookOne.getEbookSummary()%><a href="<%=request.getContextPath()%>/ebook/updateEbookSummaryForm.jsp?ebookISBN=<%=ebookOne.getEbookISBN()%>"><button type="button" class="button alt" style="float: right;">책요약 수정</button></a></td>
+							<td><%=ebookOne.getEbookSummary()%></td>
 						</tr>
 						<tr>
 							<td>ebookImg</td>
-							<td><img src="<%=request.getContextPath()%>/img/<%=ebookOne.getEbookImg()%>"><a href="<%=request.getContextPath()%>/ebook/updateEbookImgForm.jsp?ebookISBN=<%=ebookOne.getEbookISBN()%>"><button type="button" class="button alt" style="float: right;">이미지 수정</button></a></td>
+							<td><img src="<%=request.getContextPath()%>/img/<%=ebookOne.getEbookImg()%>"></td>
 						</tr>
 						<tr>
 							<td>ebookDate</td>
@@ -99,7 +99,7 @@
 						</tr>
 						<tr>
 							<td>ebookState</td>
-							<td><%=ebookOne.getEbookState()%> <a href="<%=request.getContextPath()%>/ebook/updateEbookStateForm.jsp?ebookISBN=<%=ebookOne.getEbookISBN()%>"><button type="button" class="button alt" style="float: right;">책상태 수정</button></a></td>
+							<td><%=ebookOne.getEbookState()%></td>
 						</tr>
 						<tr>
 							<td>ebookPageCount</td>

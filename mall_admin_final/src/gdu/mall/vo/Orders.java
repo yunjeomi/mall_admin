@@ -2,6 +2,7 @@ package gdu.mall.vo;
 
 public class Orders {
 	private int ordersNo;
+	private int ebookNo;
 	private String ebookISBN;
 	private int clientNo;
 	private String ordersDate;
@@ -12,6 +13,12 @@ public class Orders {
 	}
 	public void setOrdersNo(int ordersNo) {
 		this.ordersNo = ordersNo;
+	}
+	public int getEbookNo() {
+		return ebookNo;
+	}
+	public void setEbookNo(int ebookNo) {
+		this.ebookNo = ebookNo;
 	}
 	public int getClientNo() {
 		return clientNo;

@@ -113,7 +113,7 @@
 					<thead>
 						<tr>
 							<th>ordersNo</th>
-							<th>ebookISBN</th>
+							<th>ebookNo</th>
 							<th>ebookTitle</th>
 							<th>clientNo</th>
 							<th>clientMail</th>
@@ -127,8 +127,8 @@
 %>		
 						<tr>
 							<td class="align-center"><%=oec.getOrders().getOrdersNo() %></td>
-							<td class="align-center"><%=oec.getOrders().getEbookISBN() %></td>
-							<td><a href="<%=request.getContextPath()%>/orders/ordersEbookOne.jsp?ebookISBN=<%=oec.getOrders().getEbookISBN() %>"><%=oec.getEbook().getEbookTitle() %></a></td>
+							<td class="align-center"><%=oec.getOrders().getEbookNo() %></td>
+							<td><a href="<%=request.getContextPath()%>/orders/ordersEbookOne.jsp?ebookNo=<%=oec.getOrders().getEbookNo() %>"><%=oec.getEbook().getEbookTitle() %></a></td>
 							<td class="align-center"><%=oec.getClient().getClientNo() %></td>
 							<td><%=oec.getClient().getClientMail() %></td>
 							<td class="align-center">

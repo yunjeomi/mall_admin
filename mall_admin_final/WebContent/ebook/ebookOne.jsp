@@ -37,7 +37,7 @@
 	
 	
 	//ebookOne 보기 메소드 실행
-	Ebook ebookOne = EbookDao.selectEbookOne(ebook);
+	Ebook ebookOne = EbookDao.ebookOne(ebook);
 	
 	System.out.println("ebookTitle-> "+ebookOne.getEbookTitle());
 	System.out.println("categoryName-> "+ebookOne.getCategoryName());

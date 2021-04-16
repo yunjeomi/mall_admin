@@ -87,7 +87,7 @@ public class EbookDao {	//sql->초기화->db->리턴
 	}
 	
 	//ebookOne(title클릭) 보기 메소드; No만 알면 모든 정보를 가져온다.
-	public static Ebook selectEbookOne(Ebook ebook) throws Exception{
+	public static Ebook ebookOne(Ebook ebook) throws Exception{
 		String sql = "SELECT ebook_isbn ebookISBN, category_name categoryName, ebook_title ebookTitle, ebook_author ebookAuthor, ebook_company ebookCompany, ebook_page_count ebookPageCount, ebook_price ebookPrice, ebook_summary ebookSummary, ebook_img ebookImg, ebook_date ebookDate, ebook_state ebookState FROM ebook WHERE ebook_isbn=?";
 		
 		Ebook ebookOne = new Ebook();
