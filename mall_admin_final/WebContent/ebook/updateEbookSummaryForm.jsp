@@ -38,7 +38,7 @@
 	
 	//selectEbookOne메소드 실행하여 리스트를 가져오자.
 	Ebook ebookSummary = new Ebook();
-	ebookSummary = EbookDao.selectEbookOne(ebook);
+	ebookSummary = EbookDao.ebookOne(ebook);
 
 
 %>

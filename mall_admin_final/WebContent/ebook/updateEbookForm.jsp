@@ -37,7 +37,7 @@
 	ebook.setEbookISBN(ebookISBN);
 	
 	//선택한 isbn의 ebook 정보 불러오기
-	Ebook ebookOne = EbookDao.selectEbookOne(ebook);
+	Ebook ebookOne = EbookDao.ebookOne(ebook);
 	//state 판매중, 품절, 절판, 구편 설정
 	String[] state = null;
 	state = EbookDao.setEbookState();

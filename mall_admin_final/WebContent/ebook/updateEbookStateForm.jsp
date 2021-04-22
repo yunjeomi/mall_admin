@@ -43,7 +43,7 @@
 	
 	//select list 메소드 실행
 	Ebook list = new Ebook();
-	list = EbookDao.selectEbookOne(ebook);
+	list = EbookDao.ebookOne(ebook);
 	
 
 %>
